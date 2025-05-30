@@ -1,0 +1,42 @@
+nav {
+  display: flex;
+  height: 80px;
+  background-color: blue;
+  z-index: 99;
+  /* width:  calc(100% - 500px); */
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 8px;
+  margin-left: 250px;
+
+  > img {
+    width: 32px;
+    height: 32px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  > p {
+    color: whitesmoke;
+    margin: 0;
+  }
+}
+
+.open{
+   margin-left: 250px;
+   transition: all 0.3s ease-in-out;
+}
+
+.close {
+  margin-left: 0;
+  transition: all 0.3s ease-in-out;
+}

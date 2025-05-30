@@ -1,1 +1,12 @@
-<p>navbar works!</p>
+<nav>
+  <div
+    class="nav-menu"
+    [ngClass]="{
+      open: sidebarService.isSideBarOpen,
+      close: !sidebarService.isSideBarOpen
+    }"
+  >
+    <img (click)="toggleSideBar()" src="/images/menu.png" alt="burger-menu" />
+    <p>Simple CRM</p>
+  </div>
+</nav>

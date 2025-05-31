@@ -2,7 +2,89 @@
   <div class="dialog-content">
     <div class="header">
       <h1>Add User</h1>
-      <img (click)="closeDialog()" src="/images/close.png" alt="close">
+      <img (click)="closeDialog()" src="/images/close.png" alt="close" />
     </div>
+    <form>
+      <div class="name">
+        <div class="field">
+          <label for="first_name"></label>
+          <input
+            [(ngModel)]="user.firstName"
+            type="text"
+            id="first_name"
+            placeholder="First Name"
+            name="firstName"
+            required
+          />
+        </div>
+        <div class="field">
+          <label for="last_name"></label>
+          <input
+            [(ngModel)]="user.lastName"
+            type="text"
+            id="last_name"
+            placeholder="Last Name"
+            name="lastName"
+            required
+          />
+        </div>
+      </div>
+
+      <div class="date">
+        <div class="field">
+          <label for="date of birth"></label>
+          <input
+            [(ngModel)]="user.dateOfBirth"
+            type="date"
+            id="date_of_birth"
+            name="dateOfBirth"
+            required
+          />
+        </div>
+      </div>
+
+      <div class="adress">
+        <div class="field">
+          <label for="adress"></label>
+          <input
+            [(ngModel)]="user.street"
+            type="text"
+            id="adress"
+            placeholder="Street + Number"
+            name="address"
+            required
+          />
+        </div>
+      </div>
+
+      <div class="zip-code-city">
+        <div class="field">
+          <label for="zip_code"></label>
+          <input
+            [(ngModel)]="user.zipCode"
+            type="text"
+            id="zip_code"
+            placeholder="Zip Code"
+            name="zipCode"
+            required
+          />
+        </div>
+        <div class="field">
+          <label for="city"></label>
+          <input
+            [(ngModel)]="user.city"
+            type="text"
+            id="city"
+            placeholder="City"
+            name="city"
+            required
+          />
+        </div>
+      </div>
+      <div class="bottom-btns">
+        <button class="cancel-btn">Cancel</button>
+        <button (click)="saveUser()" class="save-btn" type="submit">Save</button>
+      </div>
+    </form>
   </div>
 </section>

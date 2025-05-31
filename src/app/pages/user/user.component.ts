@@ -3,6 +3,7 @@ import { NavbarComponent } from '../../shared/navbar/navbar.component';
 import { SidebarComponent } from '../../shared/sidebar/sidebar.component';
 import { CommonModule } from '@angular/common';
 import { SidebarService } from '../../services/sidebar.service';
+import { DialogService } from '../../services/dialog.service';
 import { AddUserComponent } from '../../dialog/add-user/add-user.component';
 
 @Component({
@@ -12,12 +13,10 @@ import { AddUserComponent } from '../../dialog/add-user/add-user.component';
   styleUrl: './user.component.scss',
 })
 export class UserComponent {
-  isDialogOpen: boolean = false;
+  dialogService = inject(DialogService);
   sidebarService = inject(SidebarService);
 
   openDialog() {
-    this.isDialogOpen = true;
+    this.dialogService.isDialogOpen = true;
   }
-
-  
 }

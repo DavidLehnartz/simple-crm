@@ -1,0 +1,70 @@
+section {
+  margin-left: 250px;
+}
+
+.user-content {
+  padding: 16px;
+}
+
+.open {
+  /*  margin-left: 250px; */
+  transition: all 0.3s ease-in-out;
+}
+
+.close {
+  margin-left: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+button {
+  position: absolute;
+  right: 32px;
+  bottom: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: blue;
+  border-radius: 100%;
+  border: none;
+  width: 56px;
+  height: 56px;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    background-color: rgb(85, 85, 237);
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  > img {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.tool-tip-text {
+  visibility: hidden;
+  opacity: 0;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 6px 8px;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 70px; /* über dem Button */
+  right: 50%;
+  transform: translateX(50%);
+  white-space: nowrap;
+  transition: opacity 0.2s ease-in-out;
+  font-size: 12px;
+  z-index: 1;
+  transition: all 0.2s ease-in-out;
+}
+
+.add-button:hover .tool-tip-text {
+  visibility: visible;
+  opacity: 1;
+  
+}

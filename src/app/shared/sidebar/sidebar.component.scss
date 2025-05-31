@@ -4,7 +4,8 @@ aside {
   left: 0;
   width: 250px;
   height: 100vh;
-  background-color: antiquewhite;
+  background-color: rgb(145, 145, 227);
+  /* border-right: 1px solid #ccc; */
 
   max-width: 1440px;
   margin: 0 auto;
@@ -12,6 +13,40 @@ aside {
 
 .sidebar {
   width: 100%;
+}
+
+.sidebar-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  border-bottom: 1px solid #ccc;
+}
+
+.sidebar-items {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+
+  > li {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    list-style: none;
+    padding: 8px;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #b3b0b0;
+      border-radius: 8px;
+      transition: all 0.5s ease-in-out;
+    }
+  }
+}
+
+ul {
+  padding: 0;
+  margin: 0;
 }
 
 .open {

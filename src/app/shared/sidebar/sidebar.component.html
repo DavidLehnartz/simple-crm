@@ -1,10 +1,17 @@
 <aside
+  class="fontRoboto"
   [ngClass]="{
     open: sidebarService.isSideBarOpen,
     close: !sidebarService.isSideBarOpen
   }"
 >
   <div class="sidebar">
-    <p>sidebar works!</p>
+    <div class="sidebar-logo">Logo</div>
+    <ul class="sidebar-items">
+      <li [routerLink]="'/dashboard'">
+        <img src="/images/dashboard.png" alt="" />Dashboard
+      </li>
+      <li [routerLink]="'/user'"><img src="/images/user.png" alt="" />User</li>
+    </ul>
   </div>
 </aside>

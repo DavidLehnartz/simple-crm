@@ -14,7 +14,7 @@ nav {
   max-width: 1440px;
   margin: 0 auto;
   padding: 8px;
-  margin-left: 250px;
+ /*  margin-left: 250px; */
 
   > img {
     width: 32px;
@@ -32,7 +32,7 @@ nav {
 }
 
 .open{
-   margin-left: 250px;
+   /* margin-left: 250px; */
    transition: all 0.3s ease-in-out;
 }
 

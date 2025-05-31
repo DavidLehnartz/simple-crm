@@ -1,1 +1,25 @@
-<p>user works!</p>
+<section
+  class="fontRoboto"
+  [ngClass]="{
+    open: sidebarService.isSideBarOpen,
+    close: !sidebarService.isSideBarOpen
+  }"
+>
+  <app-navbar></app-navbar>
+  <app-sidebar></app-sidebar>
+  <div class="user-content">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, officia
+      accusantium? Voluptatum hic delectus ipsum quibusdam consequuntur corrupti
+      quas quidem beatae. Aut nihil consectetur modi nesciunt, esse consequatur
+      qui aliquam.
+    </p>
+    <button (click)="openDialog()" class="add-button">
+      <img src="/images/add.png" alt="add" />
+      <span class="tool-tip-text">Add User</span>
+    </button>
+  </div>
+</section>
+@if (isDialogOpen) {
+<app-add-user></app-add-user>
+}
